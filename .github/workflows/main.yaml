@@ -1,0 +1,13 @@
+name: JavaScript Dev Template
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '20'
+      - run: npm run format
+      - run: npm run lint
+      - run: npm run test
