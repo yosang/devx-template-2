@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/yosang/devx-template-2#readme",
   "devDependencies": {
+    "@eslint/js": "^9.39.2",
     "eslint": "^9.39.2",
+    "globals": "^17.0.0",
     "husky": "^9.1.7",
     "jest": "^30.2.0",
     "lint-staged": "^16.2.7",
