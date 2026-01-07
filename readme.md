@@ -64,5 +64,20 @@ Add jest global keywords like `describe`, `it`, `expect` to ESLint config file:
 ```
 
 Add a script to `package.json` for github actions: `"test": "jest"`
+Add `"type":"module"` to `package.json` as well.
+
+## Babel configuration
+
+In order to use Jest with `CommonJS` we need babel to transpile so we can use.
+
+Install babel with Jest support with `npm i -D @babel/core @babel/preset-env babel-jest`
+
+Create a configuration file named `.babelrc` and add the presets
+
+```json
+{
+  "presets": ["@babel/preset-env"]
+}
+```
 
 ## Github Actions configuration
