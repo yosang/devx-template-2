@@ -8,6 +8,14 @@ The goal is to provide a reusablke development ready template with the following
 - Pre-commit hook with `husky` and `lint-staged` to stop bad code from arriving the repository
 - Github actions workflow that runs another check on all the above once the code has arrived the repository.
 
+# Pre-configuration
+
+This repo is configured to use `ESM (ECMAScript Modules)` which uses `import` and `export` syntax.
+
+This is enabled by `"type": "module"` in `package.json` or by using the `.mjs` file extension.
+
+Since `Jest` and many og tools default to `CJS (CommonJS)` which uses `require()` and `module.exports` we are using babel to transpile our `ESM` code to `CJS` for Jest.
+
 ## Husky configuration
 
 Install husky `npm i -D husky`
@@ -64,7 +72,6 @@ Add jest global keywords like `describe`, `it`, `expect` to ESLint config file:
 ```
 
 Add a script to `package.json` for github actions: `"test": "jest"`
-Add `"type":"module"` to `package.json` as well.
 
 ## Babel configuration
 
