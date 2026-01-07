@@ -1,6 +1,6 @@
 This template build upon my previous [repo](https://github.com/yosang/dev-template/tree/main).
 
-The goal is to provide a reusablke development ready template with the following tooling:
+The goal is to provide a reusable development ready template with the following tooling:
 
 - Testing environment with `jest`.
 - Proper coding style with `prettier`.
@@ -88,3 +88,24 @@ Create a configuration file named `.babelrc` and add the presets
 ```
 
 ## Github Actions configuration
+
+Create a folder `.github` and another one inside it named `workflows` with one file named `main.yaml`.
+
+The script used for this automation is:
+
+```yaml
+name: JavaScript Dev Template
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '20'
+      - run: npm install
+      - run: npm run format
+      - run: npm run lint
+      - run: npm run test
+```
