@@ -1,9 +1,9 @@
 {
   "scripts": {
-    "prepare": "husky",
     "test": "jest",
     "format": "prettier --check .",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
