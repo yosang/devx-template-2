@@ -1,0 +1,26 @@
+{
+  "scripts": {
+    "prepare": "husky",
+    "test": "jest",
+    "format": "prettier --check .",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yosang/devx-template-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yosang/devx-template-2/issues"
+  },
+  "homepage": "https://github.com/yosang/devx-template-2#readme",
+  "devDependencies": {
+    "eslint": "^9.39.2",
+    "husky": "^9.1.7",
+    "jest": "^30.2.0",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.7.4"
+  }
+}
